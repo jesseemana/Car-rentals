@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: "Car Hub",
+  title: 'Whips r Us',
   description: "Discover world's best car showcase application",
 }
 
