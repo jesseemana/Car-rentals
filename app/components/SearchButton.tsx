@@ -7,8 +7,8 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => {
       className={`-ml-3 z-10 ${otherClasses}`}
     >
       <Image
-        src={'/magnifying-glass.svg'}
-        alt={'magnifying glass'}
+        src='/magnifying-glass.svg'
+        alt='magnifying glass'
         width={40}
         height={40}
         className='object-contain'

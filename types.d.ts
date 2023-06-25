@@ -55,3 +55,9 @@ interface FilterProps {
   model?: string
   manufacturer?: string
 }
+
+interface CarDetailsProps {
+  isOpen: boolean;
+  closeModal: () => void;
+  car: CarProps;
+}

@@ -1,10 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import SearchButton from './SearchButton'
 import SearchManufacturer from './SearchManufacturer'
+
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 const SearchBar = () => {
   const router = useRouter()
@@ -51,7 +52,7 @@ const SearchBar = () => {
           manufacturer={manufacturer}
           setManuFacturer={setManuFacturer}
         />
-        <SearchButton otherClasses='sm:hidden' />
+        <SearchButton otherClasses='sm:hidden ' />
       </div>
       <div className='flex-1 max-sm:w-full flex justify-start items-center relative'>
         <Image

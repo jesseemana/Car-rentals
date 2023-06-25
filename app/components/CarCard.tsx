@@ -1,9 +1,11 @@
 'use client'
 
-import { calculateCarRent, generateCarImageUrl } from '@utils'
 import Image from 'next/image'
-import { useState }from 'react'
 import Button from './Button'
+import CarDetails from './CarDetails'
+import { useState }from 'react'
+import { calculateCarRent, generateCarImageUrl } from '@utils'
+
 
 const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car
@@ -15,7 +17,7 @@ const CarCard = ({ car }: CarCardProps) => {
   return (
     <div className='flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl group'>
         <div className='w-full flex justify-between items-start gap-2'>
-            <h2 className='text-[22px] leading-[26px] font-bold capitalize'>{make} {model}</h2>
+          <h2 className='text-[22px] leading-[26px] font-bold capitalize'>{make} {model}</h2>
         </div>
 
         <p className='flex mt-6 text-[32px] leading-[38px] font-extrabold'>
@@ -77,6 +79,12 @@ const CarCard = ({ car }: CarCardProps) => {
             />
           </div>
         </div>
+
+        <CarDetails 
+          car={car} 
+          isOpen={isOpen} 
+          closeModal={() => setIsOpen(false)} 
+        />
     </div>
   )
 }
