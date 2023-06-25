@@ -2,7 +2,7 @@
 
 const CustomFilter = ({ title, options }: CustomFilterProps) => {
   return (
-    <div>CustomFilter</div>
+    <div>{title}</div>
   )
 }
 

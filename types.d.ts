@@ -34,6 +34,7 @@ interface SearchManuFacturerProps {
 }
 
 interface CarCardProps {
+  car: CarProps
   mpg: number 
   year: number 
   make: string
@@ -48,9 +49,9 @@ interface HomeProps {
 }
 
 interface FilterProps {
-  manufacturer?: string
   year?: number
-  model?: string
-  limit?: number
   fuel?: string
+  limit?: number
+  model?: string
+  manufacturer?: string
 }
