@@ -1,25 +1,23 @@
 'use client'
 
-import Image from 'next/image'
 import Button from './Button'
+import Image from 'next/image'
 
 const Hero = () => {
- function handleScroll() {
+  const handleScroll = () => {
     const nextSelection = document.getElementById('discover')
 
-    if (nextSelection) {
-        nextSelection.scrollIntoView({ behavior: 'smooth' })
-    }
- }
+    if (nextSelection) nextSelection.scrollIntoView({behavior: 'smooth'})
+  }
 
   return (
     <div className='flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto mt-20'>
       <div className="flex-1 pt-37 padding-x">
         <h1 className='2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold'>
-          Find, book, or rent a car quickly and easily
+          Find, book, or rent a car quickly and easily.
         </h1>
-          <p className='text-[27px] text-black-100 font-light mt-5'>
-            streamline your car reantal process wiht or effortless booking process
+        <p className='text-[27px] text-black-100 font-light mt-5'>
+          streamline your car rental process with or effortless booking process.
         </p>
         <Button
           title='Explore Cars'
@@ -27,7 +25,6 @@ const Hero = () => {
           handleClick={handleScroll}
         />
       </div>
-
       <div className='xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen'>
         <div className='relative xl:w-full w-[90%] xl:h-full h-[590px] z-0'>
           <Image 
@@ -37,8 +34,8 @@ const Hero = () => {
             className='object-contain'
           />
         </div>
-        
-        <div className='absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat round -z-10 w-full xl:h-screen h-[590px] overflow-hidden'/>
+
+        <div className='absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden' />
       </div>
     </div>
   )
