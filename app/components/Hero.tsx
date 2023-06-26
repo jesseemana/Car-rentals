@@ -7,7 +7,9 @@ const Hero = () => {
   const handleScroll = () => {
     const nextSelection = document.getElementById('discover')
 
-    if (nextSelection) nextSelection.scrollIntoView({behavior: 'smooth'})
+    if (nextSelection) {
+      nextSelection.scrollIntoView({behavior: 'smooth'})
+    }
   }
 
   return (
