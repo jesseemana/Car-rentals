@@ -53,6 +53,7 @@ export default async function Home({ searchParams }: HomeProps) {
   // })
 
   // const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
+  
   const isDataEmpty = allCars.length < 1 || !allCars
 
   return (
