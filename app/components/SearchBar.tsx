@@ -7,39 +7,40 @@ import SearchManufacturer from './SearchManufacturer'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 
-const SearchBar = () => {
+const SearchBar = ({ setManufacturer, setModel }: any) => {
   const router = useRouter()
-  const [model, setModel] = useState('')
-  const [manufacturer, setManuFacturer] = useState('')
+  const [searchModel, setSearchModel] = useState('')
+  const [searchManufacturer, setSearchManuFacturer] = useState('')
   
   const handleSearch = (e: React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault()
 
-    if (manufacturer.trim() === '' && model.trim() === '') return alert('Please provide some input')
+    if (searchManufacturer.trim() === '' && searchModel.trim() === '') return alert('Please provide some input')
 
-    updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase())
+    setModel(searchModel.toLowerCase())
+    setManufacturer(searchManufacturer.toLowerCase())
   }
 
 
-  const updateSearchParams =  (model: string, manufacturer: string) => {
-    const searchParams = new URLSearchParams(window.location.search)
+  // const updateSearchParams =  (model: string, manufacturer: string) => {
+  //   const searchParams = new URLSearchParams(window.location.search)
 
-    if (model) {
-      searchParams.set('model', model)
-    } else {
-      searchParams.delete('model')
-    }
+  //   if (model) {
+  //     searchParams.set('model', model)
+  //   } else {
+  //     searchParams.delete('model')
+  //   }
 
-    if (manufacturer) {
-      searchParams.set('manufacturer', manufacturer)
-    } else {
-      searchParams.delete('manufacturer')
-    }
+  //   if (manufacturer) {
+  //     searchParams.set('manufacturer', manufacturer)
+  //   } else {
+  //     searchParams.delete('manufacturer')
+  //   }
 
-    const newPathname = `${window.location.pathname}?${searchParams.toString()}`
+  //   const newPathname = `${window.location.pathname}?${searchParams.toString()}`
 
-    router.push(newPathname)
-  }
+  //   router.push(newPathname)
+  // }
 
 
   return (
@@ -49,8 +50,10 @@ const SearchBar = () => {
     >
       <div className='flex-1 max-sm:w-full flex justify-start items-center relative'>
         <SearchManufacturer 
-          manufacturer={manufacturer}
-          setManuFacturer={setManuFacturer}
+          selected={searchManufacturer}
+          setSelected={setSearchManuFacturer}
+          // manufacturer={searchManufacturer}
+          // setManuFacturer={setSearchManuFacturer}
         />
         <SearchButton otherClasses='sm:hidden ' />
       </div>
@@ -65,8 +68,8 @@ const SearchBar = () => {
         <input
           type='text'
           name='model'
-          value={model}
-          onChange={(e) => setModel(e.target.value)}
+          value={searchModel}
+          onChange={(e) => setSearchModel(e.target.value)}
           placeholder='Tiguan...'
           className='w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm'
         />

@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'
 import { Listbox, Transition } from '@headlessui/react'
 import { updateSearchParams } from '@utils'
 
-const CustomFilter = ({ title, options }: CustomFilterProps) => {
+const CustomFilter = ({ title, options, setFilter }: CustomFilterProps) => {
   const router = useRouter()
 
   const [selected, setSelected] = useState(options[0])
@@ -23,7 +23,8 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
         value={selected}
         onChange={(e) => {
           setSelected(e) // Update the selected option in state
-          handleUpdateParams(e) // Update the URL search parameters and navigate to the new URL
+          setFilter(e.value)
+          // handleUpdateParams(e) // Update the URL search parameters and navigate to the new URL
         }}
       >
         <div className='relative w-fit z-10'>

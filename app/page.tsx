@@ -3,18 +3,20 @@
 
 import { fetchCars } from '@utils'
 import { useState, useEffect } from 'react'
+import { fuels, yearsOfProduction } from './constants'
+
+import Image from 'next/image'
 import Hero from '@/app/components/Hero'
 import CarCard from './components/CarCard'
 import ShowMore from './components/ShowMore'
 import SearchBar from '@/app/components/SearchBar'
-import { fuels, yearsOfProduction } from './constants'
 import CustomFilter from '@/app/components/CustomFilter'
 
 export default async function Home({ searchParams }: HomeProps) {
   const [allCars, setAllCars] = useState([])
   const [fuel, setFuel] = useState('')
   const [model, setModel]= useState('')
-  const [manufacturer, setManufacture] = useState('')
+  const [manufacturer, setManufacturer] = useState('')
   const [limit, setLimit] = useState(10)
   const [year, setYear] = useState(2022)
   const [loading, setLoading] = useState(false)
@@ -63,10 +65,13 @@ export default async function Home({ searchParams }: HomeProps) {
         </div>
 
         <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
-          <SearchBar />
+          <SearchBar 
+            setManufacturer={setManufacturer} 
+            setModel={setModel} 
+          />
           <div className='flex justify-start flex-wrap items-center gap-2'>
-            <CustomFilter title='fuel' options={fuels} />
-            <CustomFilter title='year' options={yearsOfProduction} />
+            <CustomFilter title='fuel' options={fuels} setFilter={setFuel} />
+            <CustomFilter title='year' options={yearsOfProduction} setFilter={setYear} />
           </div>
         </div>
 
@@ -79,9 +84,22 @@ export default async function Home({ searchParams }: HomeProps) {
               ))}
             </div>
 
+            {loading && (
+              <div className='w-full mt-17 flex-center'>
+                <Image 
+                  src='/loader.scg'
+                  alt='loader'
+                  width={40}
+                  height={40}
+                  className='object-contain'
+                />
+              </div>
+            )}
+
             <ShowMore
-              pageNumber={(limit || 10) / 10}
-              isNext={(limit || 10) > allCars.length}
+              pageNumber={limit / 10}
+              isNext={limit > allCars.length}
+              setLimit={setLimit}
             />
           </section>
         ) : (

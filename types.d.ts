@@ -21,6 +21,7 @@ interface OptionProps {
 interface CustomFilterProps {
   title: string
   options: OptionProps[]
+  setFilter: any
 }
 
 interface ShowMoreProps {
@@ -29,8 +30,8 @@ interface ShowMoreProps {
 }
 
 interface SearchManuFacturerProps {
-  manufacturer: string
-  setManuFacturer: (manufacturer: string) => void
+  selected: string
+  setSelected: (manufacturer: string) => void
 }
 
 interface CarCardProps {
