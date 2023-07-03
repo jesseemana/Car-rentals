@@ -27,6 +27,7 @@ interface CustomFilterProps {
 interface ShowMoreProps {
   pageNumber: number
   isNext: boolean
+  setLimit: any
 }
 
 interface SearchManuFacturerProps {
