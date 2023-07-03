@@ -1,3 +1,6 @@
+'use client'
+// CONVERT TO CLIENT COMPONENT TO AVOID SCROLLING TO TOP ON SEARCH SUBMISSION 
+
 import Image from 'next/image'
 import Hero from '@/app/components/Hero'
 import SearchBar from '@/app/components/SearchBar'
@@ -5,8 +8,41 @@ import CustomFilter from '@/app/components/CustomFilter'
 import { fetchCars } from '@utils'
 import ShowMore from './components/ShowMore'
 import CarCard from './components/CarCard'
+import { fuels, yearsOfProduction } from './constants'
+import { useState, useEffect } from 'react'
 
 export default async function Home({ searchParams }: HomeProps) {
+  const [allCars, setAllCars] = useState([])
+  const [fuel, setFuel] = useState('')
+  const [model, setModel]= useState('')
+  const [manufacturer, setManufacture] = useState('')
+  const [limit, setLimit] = useState(10)
+  const [year, setYear] = useState(2022)
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    const getAllCars = async () => {
+      setLoading(true)
+      try {
+        const result = await await fetchCars({
+          fuel: fuel || '',
+          model: model || '',
+          year: year || 2022,
+          limit: limit || 10,
+          manufacturer: manufacturer || '',
+        })
+
+        setAllCars(result)
+      } catch (error) {
+        console.error(`AN ERROR OCCURED: ${error}`)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    getAllCars()
+  }, [model, fuel, manufacturer, limit, year, loading])
+
   // const allCars = await fetchCars({
   //   manufacturer: searchParams.manufacturer || '',
   //   year: searchParams.year || 2022,
@@ -14,8 +50,6 @@ export default async function Home({ searchParams }: HomeProps) {
   //   limit: searchParams.limit || 10,
   //   model: searchParams.model || '',
   // })
-
-  const allCars: string[] = []
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
 
@@ -31,8 +65,8 @@ export default async function Home({ searchParams }: HomeProps) {
         <div className='mt-12 w-full flex-between items-center flex-wrap gap-5'>
           <SearchBar />
           <div className='flex justify-start flex-wrap items-center gap-2'>
-            <CustomFilter title='fuel' options={[]} />
-            <CustomFilter title='year' options={[]} />
+            <CustomFilter title='fuel' options={fuels} />
+            <CustomFilter title='year' options={yearsOfProduction} />
           </div>
         </div>
 

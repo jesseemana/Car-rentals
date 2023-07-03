@@ -12,7 +12,7 @@ const SearchBar = () => {
   const [model, setModel] = useState('')
   const [manufacturer, setManuFacturer] = useState('')
   
-  function handleSearch(e: React.FormEvent<HTMLFormElement>) {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>)=> {
     e.preventDefault()
 
     if (manufacturer.trim() === '' && model.trim() === '') return alert('Please provide some input')
@@ -21,7 +21,7 @@ const SearchBar = () => {
   }
 
 
-  function updateSearchParams(model: string, manufacturer: string) {
+  const updateSearchParams =  (model: string, manufacturer: string) => {
     const searchParams = new URLSearchParams(window.location.search)
 
     if (model) {
