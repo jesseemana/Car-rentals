@@ -1,15 +1,14 @@
 'use client'
 // CONVERT TO CLIENT COMPONENT TO AVOID SCROLLING TO TOP ON SEARCH SUBMISSION 
 
-import Image from 'next/image'
-import Hero from '@/app/components/Hero'
-import SearchBar from '@/app/components/SearchBar'
-import CustomFilter from '@/app/components/CustomFilter'
 import { fetchCars } from '@utils'
-import ShowMore from './components/ShowMore'
-import CarCard from './components/CarCard'
-import { fuels, yearsOfProduction } from './constants'
 import { useState, useEffect } from 'react'
+import Hero from '@/app/components/Hero'
+import CarCard from './components/CarCard'
+import ShowMore from './components/ShowMore'
+import SearchBar from '@/app/components/SearchBar'
+import { fuels, yearsOfProduction } from './constants'
+import CustomFilter from '@/app/components/CustomFilter'
 
 export default async function Home({ searchParams }: HomeProps) {
   const [allCars, setAllCars] = useState([])
@@ -51,7 +50,8 @@ export default async function Home({ searchParams }: HomeProps) {
   //   model: searchParams.model || '',
   // })
 
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
+  // const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
+  const isDataEmpty = allCars.length < 1 || !allCars
 
   return (
     <main className='overflow-hidden'>
@@ -80,8 +80,8 @@ export default async function Home({ searchParams }: HomeProps) {
             </div>
 
             <ShowMore
-              pageNumber={(searchParams.limit || 10) / 10}
-              isNext={(searchParams.limit || 10) > allCars.length}
+              pageNumber={(limit || 10) / 10}
+              isNext={(limit || 10) > allCars.length}
             />
           </section>
         ) : (
