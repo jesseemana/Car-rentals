@@ -1,11 +1,12 @@
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-
 import './globals.css'
 
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import Content from './components/Content'
+
 export const metadata = {
-  title: 'Whips r Us',
-  description: "Discover world's best car showcase application",
+  title: 'Mobile Mobility',
+  description: "One of Malawi's leading car rentals",
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -13,9 +14,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang='en'>
       <body className='relative'>
         <Navbar />
-        {children}
+          <Content>
+            {children}
+          </Content>
         <Footer />
       </body>
     </html>
   )
-}
+} 
