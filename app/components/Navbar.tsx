@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between items-center px-[4%] shadow-sm py-3'>
+    <nav className='flex justify-between items-center px-[4%] shadow-sm py-3'>
       <Image
         src='/logo.png' 
         alt='website logo'
@@ -16,7 +16,7 @@ const Navbar = () => {
         <h1>contact</h1>
       </div>
       <div></div>
-    </div>
+    </nav>
   )
 }
 

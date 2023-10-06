@@ -1,7 +1,11 @@
-import Hero from "./components/Hero";
+import Catalogues from './components/Catalogues'
+import Hero from './components/Hero'
 
 export default async function Home() {
   return (
-    <Hero />
+    <>
+      <Hero />
+      <Catalogues />
+    </>
   )
 } 
