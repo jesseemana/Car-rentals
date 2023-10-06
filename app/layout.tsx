@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Content from './components/Content'
 
 export const metadata = {
-  title: 'Mobile Mobility',
+  title: 'Rent A Car',
   description: "One of Malawi's leading car rentals",
 }
 
