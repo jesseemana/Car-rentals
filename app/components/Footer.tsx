@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { footer_links } from '@app/utils/links'
 import { ImLocation2 } from 'react-icons/im'
 import { FaFacebook, FaTwitter, FaInstagram, FaPhone } from 'react-icons/fa'
 
@@ -23,6 +22,7 @@ const Footer = () => {
         </div>
 
         <div className='flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-10'>
+          {/* ABOUT */}
           {footer_links.map((item, index) => (
             <div key={index} className='flex flex-col gap-6 text-base min-w-[170px]'>
               <h3 className='font-bold'>{item.title}</h3>
@@ -40,6 +40,7 @@ const Footer = () => {
             </div>
           ))}
 
+          {/* CONTACT */}
           <div className='flex flex-col gap-4 text-base min-w-[170px] text-gray-700'>
             <h3 className='font-bold capitalize'>contact</h3>
             {/* PHONE */}
@@ -60,7 +61,10 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-            {/* WORK HOURS */}
+          </div>
+
+          {/* WORK HOURS */}
+          <div className='flex flex-col gap-4 text-base min-w-[170px] text-gray-700'>
             <p className='font-semibold text-gray-900 capitalize'>
               work hours: <span className='font-normal ml-2'>Mon - Sat <br/> 
               08:00am - 17:00pm</span>
@@ -85,6 +89,18 @@ const Footer = () => {
 }
 
 export default Footer   
+
+export const footer_links = [
+  {
+    title: 'About',
+    links: [
+      { title: 'How it works', url: '/' },
+      { title: 'Featured', url: '/' },
+      { title: 'Partnership', url: '/' },
+      { title: 'Bussiness Relation', url: '/' },
+    ],
+  }
+];  
 
 export const socials = [
   { 
