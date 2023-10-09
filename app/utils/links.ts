@@ -17,12 +17,4 @@ export const footer_links = [
       { title: 'Invite a friend', url: '/' },
     ],
   },
-  {
-    title: 'Socials',
-    links: [
-      { title: 'Instagram', url: 'instagram.com' },
-      { title: 'Twitter', url: 'twiter.com/jesseemana' },
-      { title: 'Facebook', url: 'facebook.com' },
-    ],
-  },
 ];  

@@ -6,7 +6,7 @@ const Difference = () => {
     <section className='flex p-10 flex-col gap-10 mt-10'>
       <div className='flex flex-col text-center'>
         <h1 className='text-lg lg:text-2xl text-gray-950 capitalize font-bold'>why we are different</h1>
-        <p className='font-light text-gray-700'>
+        <p className='font-light text-gray-600'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
           Sed fuga sequi officiis alias sit accusamus. <br />
         </p>
@@ -20,7 +20,7 @@ const Difference = () => {
           >
             {item.icon}
             <h2 className='capitalize text-center font-semibold'>{item.title}</h2>
-            <p className='text-center'>{item.text}</p>
+            <p className='text-center text-gray-600'>{item.text}</p>
           </div>
         ))}
       </div>
