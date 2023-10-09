@@ -3,10 +3,10 @@ import Card from './Card'
 
 const Catalogues = () => {
   return (
-    <section id='catalogue' className='flex flex-col'>
+    <section id='catalogue' className='flex flex-col gap-3'>
       <div className='flex justify-between'>
         <div>
-          <h1 className='text-lg lg:text-2xl capitalize font-bold'>available cars</h1>
+          <h1 className='text-lg lg:text-2xl capitalize font-bold'>featured cars</h1>
           <p className='text- text-gray-600 font-light'>
             Explore cars you might like
           </p>
