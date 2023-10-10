@@ -1,7 +1,13 @@
+import Content from '../components/Content'
+
 const page = () => {
   return (
-    <div>cars page</div>
+    <Content>
+      <div className='h-[70vh]'>
+        <p>cars page</p>
+      </div>
+    </Content>
   )
 }
 
-export default page 
+export default page   
