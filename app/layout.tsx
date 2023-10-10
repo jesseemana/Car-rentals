@@ -2,7 +2,6 @@ import './globals.css'
 
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import Content from './components/Content'
 
 export const metadata = {
   title: 'Rent A Car',
@@ -14,9 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang='en'>
       <body className='relative'>
         <Navbar />
-          <Content>
-            {children}
-          </Content>
+          {children}
         <Footer />
       </body>
     </html>
