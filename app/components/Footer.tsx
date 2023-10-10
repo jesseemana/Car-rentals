@@ -24,7 +24,7 @@ const Footer = () => {
         <div className='flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-10'>
           {/* ABOUT */}
           {footer_links.map((item, index) => (
-            <div key={index} className='flex flex-col gap-6 text-base min-w-[170px]'>
+            <div key={index} className='flex flex-col gap-4 text-base min-w-[170px]'>
               <h3 className='font-bold'>{item.title}</h3>
               <div className='flex flex-col gap-3'>
                 {item.links.map((link) => (
@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
       </div>  
 
-      <div className='flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10'>
+      <div className='flex justify-between items-center flex-wrap mt-7 border-t border-gray-100 sm:px-16 px-6 py-5'>
         <p>@2023 Rent A Car. All rights reserved</p>
         <div className='flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10'>
           <Link href='/' className='text-gray-500'>
@@ -100,7 +100,7 @@ export const footer_links = [
       { title: 'Bussiness Relation', url: '/' },
     ],
   }
-];  
+]   
 
 export const socials = [
   { 
