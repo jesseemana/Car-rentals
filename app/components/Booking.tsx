@@ -4,7 +4,7 @@ const Booking = ({ name, image, price }: { name: string, image: string, price:st
   return (
     <div className='mt-7 grid lg:grid-cols-2 grid-cols-1 gap-3 lg:gap-4'>
       <div className='flex flex-col gap-3'>
-        <div className='bg-gray-50 lg:h-[370px] p-2 grid place-items-center'>
+        <div className='bg-gray-50 lg:h-[370px] p-2 grid place-items-center rounded-md'>
           <Image 
             src={image}
             alt={name}
