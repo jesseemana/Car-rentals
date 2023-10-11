@@ -37,7 +37,7 @@ const Booking = ({ name, image, price }: { name: string, image: string, price:st
           id='email' 
           type='email'
           placeholder='email'
-          className='border border-gray-500 outline-none p-1 md:p-2 rounded-md' 
+          className='border border-gray-500 outline-gray-500 p-1 md:p-2 rounded-md' 
         />
 
         <label htmlFor="number"  className='capitalize text-gray-700 text-sm md:text-lg'>phone number</label>
@@ -45,7 +45,7 @@ const Booking = ({ name, image, price }: { name: string, image: string, price:st
           id='numer' 
           type='text' 
           placeholder='phone number' 
-          className='border border-gray-500 outline-none p-1 md:p-2 rounded-md'
+          className='border border-gray-500 outline-gray-500 p-1 md:p-2 rounded-md'
         />
                   
         <div className='flex gap-2 md:gap-4'>
@@ -54,7 +54,7 @@ const Booking = ({ name, image, price }: { name: string, image: string, price:st
             <input 
               type='date' 
               placeholder='start date' 
-              className='border border-gray-500 outline-none p-1 md:p-2 rounded-md w-full font-thin text-sm'
+              className='border border-gray-500 outline-gray-500 p-1 md:p-2 rounded-md w-full font-thin text-sm'
             />
           </div>
           <div>
@@ -62,7 +62,7 @@ const Booking = ({ name, image, price }: { name: string, image: string, price:st
             <input 
               type='date' 
               placeholder='end date' 
-              className='border border-gray-500 outline-none p-1 md:p-2 rounded-md w-full font-thin text-sm'
+              className='border border-gray-500 outline-gray-500 p-1 md:p-2 rounded-md w-full font-thin text-sm'
             />
           </div>
         </div>
