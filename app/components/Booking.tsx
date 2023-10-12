@@ -1,6 +1,6 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-const Booking = ({ name, image, price }: { name: string, image: string, price:string }) => {
+const Booking = ({ name, image, price }: { name: string, image: string | StaticImageData, price:string }) => {
   return (
     <div className='mt-7 grid lg:grid-cols-2 grid-cols-1 gap-3 lg:gap-4'>
       <div className='flex flex-col gap-3'>
