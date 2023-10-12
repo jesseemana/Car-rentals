@@ -4,7 +4,8 @@ import bmwx3 from './public/car (8).png'
 import civic from './public/car (2).png'
 import camry from './public/car (7).png'
 
-export const cars = [
+
+const cars = [
   {
     name: "Mazda CX3",
     price: "30,000",
@@ -51,3 +52,5 @@ export const cars = [
     tank: 70
   },
 ]
+
+export default cars 

@@ -6,7 +6,7 @@
             "image": "./cx3.png",
             "type": "suv", 
             "seats": 5,
-            "transition": "stick",
+            "transition": "manual",
             "tank": 80
         },
         {
@@ -24,16 +24,16 @@
             "image": "./x3.png",
             "type": "suv", 
             "seats": 5,
-            "transition": "stick",
+            "transition": "manual",
             "tank": 80
         },
         {
             "name": "Toyota Camry",
             "price": "10,000",
             "image": "./camry.png",
-            "type": "sedansuv", 
+            "type": "sedan", 
             "seats": 5,
-            "transition": "stick",
+            "transition": "auto",
             "tank": 80
         },
         {
@@ -42,7 +42,7 @@
             "image": "./civiv.png",
             "type": "sedan", 
             "seats": 5,
-            "transition": "stick",
+            "transition": "manual",
             "tank": 80
         }
     ]
