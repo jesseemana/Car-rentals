@@ -1,8 +1,4 @@
 import Image from 'next/image'
-import { BiSupport } from 'react-icons/bi' 
-import { GrServices } from 'react-icons/gr'
-import { MdPriceCheck } from 'react-icons/md' 
-import { BsFillCheckCircleFill } from 'react-icons/bs'
 
 const About = () => {
   return (
@@ -10,7 +6,7 @@ const About = () => {
       id='about' 
       className='flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-20 border-t border-gray-100 py-7 max-w-full px-[4%]'
     >
-      <div className='bg-gray-50 p-10'>
+      <div className='bg-gray-50 p-10 rounded-md'>
         <Image 
           src='/hero.png'
           alt='Toyota fortuner'
@@ -21,36 +17,16 @@ const About = () => {
 
        <div className='flex flex-col gap-3 p-4'>
         <h1 className='capitalize text-lg md:text-3xl font-bold text-gray-900'>why you should chose us</h1>
-        <div className='flex flex-col gap-4 ml-1'>
-          {about.map((item, index) => (
-            <div key={index} className='flex items-center gap-2'>
-              {item.icon}
-              <p className='capitalize text-gray-700 text-sm md:text-lg font-extralight'>{item.text}</p>
-            </div>
-          ))}
-        </div>
+        <p className='text-gray-600 text-md md:text-lg'>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Neque quae asperiores nisi itaque eius incidunt accusantium 
+          reiciendis quaerat voluptatibus, debitis tenetur sapiente molestiae. 
+          Odio sunt optio laborum quos delectus quo consectetur fugit vero illo nihil, 
+          similique beatae, dolore, quidem itaque!
+        </p>
       </div>
     </section>
   )
 }
 
 export default About    
-
-export const about = [
-  {
-    icon: <BsFillCheckCircleFill size={20} />,
-    text: 'easy booking expirience', 
-  }, 
-  {
-    icon: <MdPriceCheck size={20} />,
-    text: 'affordable prices'
-  },
-  {
-    icon: <BiSupport size={20} />,
-    text: 'excellent customer support'
-  }, 
-  {
-    icon: <GrServices size={20} />,
-    text: 'quality service'
-  },
-]     
