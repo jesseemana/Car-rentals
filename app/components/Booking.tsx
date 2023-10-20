@@ -23,7 +23,7 @@ const Booking = ({ name, image, price }: { name: string, image: string | StaticI
         </h1>
       </div>
 
-      <form className='flex flex-col gap-2 lg:gap-4'>
+      <div className='flex flex-col gap-2 lg:gap-4'>
         <label htmlFor="location" className='capitalize text-gray-700 text-sm md:text-lg'>pick up location:</label>
         <input 
           id='location' 
@@ -66,7 +66,7 @@ const Booking = ({ name, image, price }: { name: string, image: string | StaticI
             />
           </div>
         </div>
-      </form>
+      </div>
     </div>
   )
 }

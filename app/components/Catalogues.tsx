@@ -1,9 +1,10 @@
 import Card from './Card'
 import Link from 'next/link'
+import { StaticImageData } from 'next/image'
 import Content from './Content'
-
-import { cars } from '@cars'
 import { FaArrowRight } from 'react-icons/fa'
+
+import cars from '@cars'
 
 const Catalogues = () => {
   return (
@@ -42,3 +43,13 @@ const Catalogues = () => {
 } 
 
 export default Catalogues   
+
+export interface Car {
+  name: string
+  tank: number
+  type: string
+  seats: number
+  price: string
+  image: string | StaticImageData,
+  transition: string
+}   
