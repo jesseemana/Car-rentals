@@ -17,7 +17,7 @@ const About = () => {
 
        <div className='flex flex-col gap-3 p-4'>
         <h1 className='capitalize text-lg md:text-3xl font-bold text-gray-900'>why you should chose us</h1>
-        <p className='text-gray-600 text-md md:text-lg'>
+        <p className='text-gray-600 text-md md:text-lg font-light'>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
           Neque quae asperiores nisi itaque eius incidunt accusantium 
           reiciendis quaerat voluptatibus, debitis tenetur sapiente molestiae. 
