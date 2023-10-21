@@ -50,7 +50,7 @@ const Card = ({ name, type, image, price, seats, transition, tank }: Car) => {
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className='fixed inset-0 bg-black/50' />
-          <Dialog.Content className='w-full max-w-sm md:max-w-md lg:max-w-4xl fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md p-8 bg-white text-gray-900 shadow'>
+          <Dialog.Content className='w-full max-w-sm md:max-w-md lg:max-w-4xl fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md p-8 bg-white text-gray-900 shadow overflow-y-scroll h-[700px] md:h-auto'>
             <div className='flex items-center justify-between'>
               <Dialog.Title className='text-xl capitalize'>book car</Dialog.Title>
               <Dialog.Close>
@@ -65,10 +65,10 @@ const Card = ({ name, type, image, price, seats, transition, tank }: Car) => {
             /> 
               
             <div className='mt-8 text-right space-x-6'>
-              <Dialog.Close className='rounded border border-gray-700 text-gray-400 font-medium px-4 py-2 text-sm hover:text-gray-700'>
+              <Dialog.Close className='rounded border border-gray-700 text-gray-400 font-medium px-3 py-1 md:px-4 md:py-2 text-sm hover:text-gray-700'>
                 cancel
               </Dialog.Close>
-              <button className='rounded text-white bg-gray-700 font-medium px-4 py-2 text-sm hover:bg-gray-900'>
+              <button className='rounded text-white bg-gray-700 font-medium px-3 py-1 md:px-4 md:py-2 text-sm hover:bg-gray-900'>
                 book car
               </button>
             </div>
