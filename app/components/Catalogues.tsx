@@ -1,7 +1,7 @@
-import Card from './Card'
+import Cars from './Cars'
 import Link from 'next/link'
-import { StaticImageData } from 'next/image'
 import Content from './Content'
+import { StaticImageData } from 'next/image'
 import { FaArrowRight } from 'react-icons/fa'
 
 import cars from '@cars'
@@ -21,21 +21,7 @@ const Catalogues = () => {
               <FaArrowRight />
             </Link>
           </div>  
-
-          <div className='grid grid-cols-2 lg:grid-cols-5 gap-2 lg:gap-4'>
-            {cars.map((car, index) => (
-              <Card
-                key={index} 
-                tank={car.tank}
-                name={car.name}
-                type={car.type}
-                image={car.image}
-                seats={car.seats}
-                price={car.price}
-                transition={car.transition}
-              />
-            ))}
-          </div>
+          <Cars cars={cars} />
         </div>
       </Content>
     </section>
@@ -44,12 +30,13 @@ const Catalogues = () => {
 
 export default Catalogues   
 
-export interface Car {
+
+export type Car = {
   name: string
   tank: number
   type: string
   seats: number
   price: string
-  image: string | StaticImageData,
   transition: string
+  image: string | StaticImageData,
 }   
