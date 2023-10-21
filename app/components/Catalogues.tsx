@@ -14,7 +14,7 @@ const Catalogues = () => {
           <div className='flex justify-between'>
             <div>
               <h1 className='text-lg lg:text-2xl capitalize font-bold'>featured cars</h1>
-              <p className='text- text-gray-600 font-light'>Explore cars you might like</p>
+              <p className='text-gray-600 font-light'>Explore cars you might like</p>
             </div>
             <Link href='/cars' className='group flex items-center gap-2'>
               <h1 className='text-sm lg:text-lg font-normal capitalize'>view more</h1> 
