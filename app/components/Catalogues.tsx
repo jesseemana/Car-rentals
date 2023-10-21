@@ -10,17 +10,15 @@ const Catalogues = () => {
   return (
     <section id='catalogue' className='border-t border-gray-100 py-4'>
       <Content>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-1'>
           <div className='flex justify-between'>
-            <div>
-              <h1 className='text-lg lg:text-2xl capitalize font-bold'>featured cars</h1>
-              <p className='text-gray-600 font-light'>Explore cars you might like</p>
-            </div>
+            <h1 className='text-lg lg:text-2xl capitalize font-bold'>featured cars</h1>
             <Link href='/cars' className='group flex items-center gap-2'>
               <h1 className='text-sm lg:text-lg font-normal capitalize'>view more</h1> 
               <FaArrowRight />
             </Link>
-          </div>  
+          </div>
+          <p className='text-gray-600 font-light text-[14px]'>Explore cars you might like</p>
           <Cars cars={cars} />
         </div>
       </Content>

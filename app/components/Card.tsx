@@ -11,8 +11,8 @@ const Card = ({ name, type, image, price, seats, transition, tank }: Car) => {
   return (
     <div className='bg-gray-50 p-2 lg:p-5 rounded-md w-full flex flex-col gap-4 group'>
       <div className='flex flex-col'>
-        <p className='font-bold text-gray-800 text-xl capitalize'>{name}</p>
-        <p className='font-normal text-gray-600 text-md capitalize'>{type}</p>
+        <p className='font-bold text-gray-800 text-lg md:text-xl capitalize'>{name}</p>
+        <p className='font-normal text-gray-600 text-sm md:text-md capitalize'>{type}</p>
       </div>
       
       <div className='h-[100px] grid place-items-center hover:scale-120 transition-all'>
