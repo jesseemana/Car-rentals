@@ -50,7 +50,7 @@ const Card = ({ name, type, image, price, seats, transition, tank }: Car) => {
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className='fixed inset-0 bg-black/50' />
-          <Dialog.Content className='w-full max-w-sm md:max-w-md lg:max-w-4xl fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md p-8 bg-white text-gray-900 shadow overflow-y-scroll h-[700px] md:h-auto'>
+          <Dialog.Content className='w-full max-w-sm md:max-w-md lg:max-w-4xl fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-md p-8 bg-white text-gray-900 shadow overflow-y-scroll h-[600px] md:h-auto'>
             <div className='flex items-center justify-between'>
               <Dialog.Title className='text-xl capitalize'>book car</Dialog.Title>
               <Dialog.Close>
