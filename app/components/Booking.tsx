@@ -32,14 +32,6 @@ const Booking = ({ name, image, price }: { name: string, image: string | StaticI
           className='border border-gray-500 outline-gray-500 p-1 md:p-2 rounded-md' 
         />
 
-        <label htmlFor="location" className='capitalize text-gray-700 text-[14px] md:text-md'>pick up location(optional):</label>
-        <input 
-          id='location' 
-          type='text' 
-          placeholder='pick up location' 
-          className='border border-gray-500 outline-gray-500 p-1 md:p-2 rounded-md' 
-        />
-
         <label htmlFor="email" className='capitalize text-gray-700 text-[14px] md:text-md'>email</label>
         <input 
           id='email' 
